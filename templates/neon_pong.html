@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Pong | Aliza's Boredom Products</title>
+
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+  />
+</head>
+
+<body>
+  <main class="game-shell">
+    <header>
+      <div>
+        <a class="back-link" href="/">← All games</a>
+        <p class="eyebrow">Aliza's Boredom Products · Game 01</p>
+        <h1>Neon Pong</h1>
+      </div>
+
+      <div class="scoreboard">
+        <div>
+          <span>YOU</span>
+          <strong id="player-score">0</strong>
+        </div>
+
+        <span class="vs">:</span>
+
+        <div>
+          <span>AI</span>
+          <strong id="ai-score">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="game-area">
+      <canvas id="pongCanvas" width="900" height="520"></canvas>
+
+      <div id="message-overlay" class="message-overlay">
+        <div class="message-card">
+          <h2>Ready?</h2>
+          <p>
+            First player to <strong>5 points</strong> wins.
+            Move with your mouse or the arrow keys.
+          </p>
+
+          <button id="start-button">Start Game</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Controls:
+        <kbd>↑</kbd>
+        <kbd>↓</kbd>
+        or move your mouse
+      </p>
+
+      <div class="footer-actions">
+        <button id="music-button" class="secondary-button">
+          Music: On
+        </button>
+
+        <button id="restart-button">Restart</button>
+      </div>
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aliza's Boredom Products</title>
+
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+  />
+</head>
+
+<body class="hub-page">
+  <main class="hub-shell">
+    <section class="hub-intro">
+      <p class="eyebrow">A tiny collection of distractions</p>
+      <h1>Aliza's<br><span>Boredom Products</span></h1>
+
+      <p class="hub-description">
+        A growing arcade of tiny games for when you have five minutes,
+        no plans, and absolutely nothing productive to do.
+      </p>
+    </section>
+
+    <section class="games-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Game library</p>
+          <h2>Pick a game</h2>
+        </div>
+
+        <span class="game-count">03 games available</span>
+      </div>
+
+      <div class="game-grid">
+        <a class="game-card neon-pong-card" href="/neon-pong">
+          <div class="card-glow"></div>
+
+          <div class="game-card-top">
+            <span class="game-number">01</span>
+            <span class="play-label">Play →</span>
+          </div>
+
+          <div class="pong-preview" aria-hidden="true">
+            <span class="mini-paddle left"></span>
+            <span class="mini-ball"></span>
+            <span class="mini-paddle right"></span>
+          </div>
+
+          <div class="game-card-bottom">
+            <p class="eyebrow">Arcade game</p>
+            <h3>Neon Pong</h3>
+            <p>First to 5 wins. You versus a very determined AI paddle.</p>
+          </div>
+        </a>
+
+        <a class="game-card memory-card-preview" href="/memory-match">
+  <div class="game-card-top">
+    <span class="game-number">02</span>
+    <span class="play-label">Play →</span>
+  </div>
+
+  <div class="memory-preview-icons" aria-hidden="true">
+    <span>✦</span>
+    <span>♥</span>
+    <span>⚡</span>
+    <span>☾</span>
+  </div>
+
+  <div class="game-card-bottom">
+    <p class="eyebrow">Memory game</p>
+    <h3>Neon Memory</h3>
+    <p>Find matching animated cards before the AI remembers them all.</p>
+  </div>
+</a>
+
+<a class="game-card neon-palette-card" href="/neon-palette">
+  <div class="game-card-top">
+    <span class="game-number">03</span>
+    <span class="play-label">Play →</span>
+  </div>
+
+  <div class="palette-preview" aria-hidden="true">
+    <span class="palette-preview-swatch swatch-one"></span>
+    <span class="palette-preview-swatch swatch-two"></span>
+    <span class="palette-preview-swatch swatch-three"></span>
+  </div>
+
+  <div class="game-card-bottom">
+    <p class="eyebrow">Color memory game</p>
+    <h3>Neon Palette</h3>
+    <p>Memorize random colors. Rebuild them. Face the judgment.</p>
+  </div>
+</a>
+
+        <div class="game-card coming-soon-card">
+          <div class="game-card-top">
+            <span class="game-number">04</span>
+            <span class="coming-label">Coming soon</span>
+          </div>
+
+          <div class="coming-soon-symbol">+</div>
+
+          <div class="game-card-bottom">
+            <p class="eyebrow">Future distraction</p>
+            <h3>Something chaotic</h3>
+            <p>Your next game can live here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

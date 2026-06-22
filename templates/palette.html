@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Palette | Aliza's Boredom Products</title>
+
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+  />
+</head>
+
+<body class="palette-page">
+  <main class="palette-shell">
+    <header class="palette-header">
+      <div>
+        <a class="back-link" href="/">← All games</a>
+        <p class="eyebrow">Aliza's Boredom Products · Game 03</p>
+        <h1>Neon Palette</h1>
+      </div>
+
+      <div class="palette-round-card">
+        <span>Round</span>
+        <strong id="round-number">1 / 3</strong>
+      </div>
+    </header>
+
+    <section class="palette-game-panel">
+      <div class="palette-status-row">
+        <div class="palette-status-copy">
+          <span class="turn-dot"></span>
+          <p id="palette-status">Memorize this color. Do not embarrass yourself.</p>
+        </div>
+
+        <div class="palette-score">
+          <span>Total</span>
+          <strong id="total-score">0</strong>
+        </div>
+      </div>
+
+      <section id="color-stage" class="color-stage">
+        <div id="target-color-card" class="target-color-card">
+          <div class="color-stage-label">
+            <span>Memorize this color</span>
+            <strong id="countdown">3.00</strong>
+          </div>
+        </div>
+
+        <div id="live-color-stage" class="live-color-stage hidden">
+            <div class="live-stage-label">
+                <span>Your live color mix</span>
+                <strong id="live-stage-hex">#FF4FAC</strong>
+            </div>
+        </div>
+        <div id="guess-panel" class="guess-panel hidden">
+          <div class="color-comparison">
+            <div class="comparison-card">
+              <span>Your guess</span>
+              <div id="guess-preview" class="comparison-swatch"></div>
+            </div>
+
+            <div class="comparison-divider">vs</div>
+
+            <div class="comparison-card target-comparison-card">
+              <span>Original</span>
+              <div id="original-preview" class="comparison-swatch"></div>
+            </div>
+          </div>
+
+          <div class="round-result">
+            <p id="round-score-text">You scored 0 / 100</p>
+            <h2 id="sassy-comment">Let us pretend that was intentional.</h2>
+          </div>
+
+          <button id="next-round-button">Next Round</button>
+        </div>
+      </section>
+
+      <section id="controls-panel" class="palette-controls hidden">
+        <div class="live-color-row">
+          <div>
+            <p class="eyebrow">Your color</p>
+            <h2 id="hex-display">#FF4FAC</h2>
+          </div>
+
+          <div id="live-preview" class="live-preview"></div>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label-row">
+            <label for="hue-slider">Hue</label>
+            <span id="hue-value">0°</span>
+          </div>
+          <input id="hue-slider" type="range" min="0" max="360" value="330" />
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label-row">
+            <label for="saturation-slider">Saturation</label>
+            <span id="saturation-value">70%</span>
+          </div>
+          <input
+            id="saturation-slider"
+            type="range"
+            min="0"
+            max="100"
+            value="70"
+          />
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label-row">
+            <label for="brightness-slider">Brightness</label>
+            <span id="brightness-value">90%</span>
+          </div>
+          <input
+            id="brightness-slider"
+            type="range"
+            min="0"
+            max="100"
+            value="90"
+          />
+        </div>
+
+        <button id="lock-in-button" class="lock-in-button">
+          Lock In Guess
+        </button>
+      </section>
+
+      <section id="final-screen" class="palette-final-screen hidden">
+        <p class="eyebrow">Final result</p>
+        <h2 id="final-score">0 / 300</h2>
+        <p id="final-comment">
+          The color wheel may need therapy after that.
+        </p>
+
+        <button id="restart-palette-button">Play Again</button>
+      </section>
+    </section>
+
+    <footer class="palette-footer">
+      <p>
+        Memorize the color, then recreate it with the sliders. Three rounds only.
+      </p>
+
+      <button id="palette-sound-button" class="secondary-button">
+        Sound: On
+      </button>
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/palette.js') }}"></script>
+</body>
+</html>

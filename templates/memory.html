@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Memory | Aliza's Boredom Products</title>
+
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+  />
+</head>
+
+<body class="memory-page">
+  <main class="memory-shell">
+    <header class="memory-header">
+      <div>
+        <a class="back-link" href="/">← All games</a>
+        <p class="eyebrow">Aliza's Boredom Products · Game 02</p>
+        <h1>Neon Memory</h1>
+      </div>
+
+      <div class="memory-scoreboard">
+        <div class="memory-score-card player-score-card">
+          <span>You</span>
+          <strong id="player-score">0</strong>
+        </div>
+
+        <div class="memory-score-card ai-score-card">
+          <span>AI</span>
+          <strong id="ai-score">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="memory-game-panel">
+      <div class="memory-status-bar">
+        <span class="turn-dot" id="turn-dot"></span>
+        <p id="game-status">Your turn — find a pair.</p>
+      </div>
+
+      <div
+        id="memory-board"
+        class="memory-board"
+        aria-label="Memory matching board"
+      ></div>
+    </section>
+
+    <footer class="memory-footer">
+  <p>
+    Match two cards. Wrong guesses flip back and pass the turn.
+  </p>
+
+  <div class="footer-actions">
+    <button id="sound-button" class="secondary-button">
+      Sound: On
+    </button>
+
+    <button id="restart-memory-button">New Game</button>
+  </div>
+</footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/memory.js') }}"></script>
+</body class="memory-page">
+</html>
