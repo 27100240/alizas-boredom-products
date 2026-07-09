@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "script-src 'self' 'unsafe-eval' https://trodden-cogwheel-distrust.ngrok-free.dev https://cdnjs.cloudflare.com https://fonts.googleapis.com; frame-src https://trodden-cogwheel-distrust.ngrok-free.dev"
+        }
+      ]
+    }
+  ]
+}
